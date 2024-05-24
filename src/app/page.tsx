@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import CardsSection from "@/components/ui/CardsSection";
+import MainSection from "@/components/ui/MainSection";
 import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
@@ -45,18 +46,38 @@ export default function Home() {
           Try for free
         </Button>
       </div>
-      <section>
+      <section className=" mx-72">
         <div className=" inline-flex justify-center items-center ">
           <Image
             src="/market-section.avif"
             width={900}
             height={500}
             alt="marketing"
-            className="mx-56"
           />
         </div>
       </section>
       <CardsSection />
+      <MainSection />
+      <footer className="flex flex-row justify-between items-center mx-2">
+        <div className="mt-12">
+          <Link href="/">
+            <Image src="/logo.png" alt="syncapi.ai" width={150} height={50} />
+          </Link>
+        </div>
+        <span className="font-normal">@2024 SyncAPI.ai</span>
+        <ul className="inline-flex justify-between items-center gap-2 ">
+          <li>
+            <Link href="/about">
+              <h4 className="p-3 font-medium">About</h4>
+            </Link>
+          </li>
+          <li>
+            <Link href="/features">
+              <h4 className="p-3 font-medium">Features</h4>
+            </Link>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
