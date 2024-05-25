@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 function Feature() {
+  //change folder name
   return (
     <div>
       <header className="flex flex-row justify-between items-start">
